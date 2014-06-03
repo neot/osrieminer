@@ -1,0 +1,26 @@
+#!/bin/bash
+PATH=/bin/:/usr/bin:$PATHi
+function start {
+cd $OPENSHIFT_RIEMINER_DIR/version/1/
+  nohup xptminer >> $OPENSHIFT_RIEMINER_LOG_FILE 2>&1 &
+  echo $! > $OPENSHIFT_RIEMINER_PID_FILE
+  echo "Start"
+  }
+function stop {
+  echo "stopping RIEMINER..."
+  export ID=`cat $OPENSHIFT_RIEMINER_PID_FILE`
+  kill -9 $PID
+}
+function restart {
+  stop;
+  start;
+}
+function status {
+  echo "Not currently made"
+}
+case "$1" in
+  start) start ;;
+  stop) stop ;;
+  restart) restart ;;
+  status) status ;;
+esac

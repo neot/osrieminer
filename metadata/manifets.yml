@@ -1,0 +1,17 @@
+Name: rieminer
+Cartridge-Short-Name: RIEMINER
+Cartridge-Version: '1'
+Cartridge-Vendor: tf
+Display-Name: RIEMINER 1
+Description: riecoin miner
+Version: '1'
+License: bof
+License-Url: lameremichelle.org
+Vendor: tf
+Categories:
+  - embedded
+Website: https://github.com/neot/osrieminer
+Source-Url: https://github.com/neot/osrieminer.git
+Scaling:
+  Min: 1
+  Max: -1
