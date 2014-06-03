@@ -2,7 +2,7 @@
 PATH=/bin/:/usr/bin:$PATHi
 function start {
 cd $OPENSHIFT_RIEMINER_DIR/version/1/
-  nohup xptminer >> $OPENSHIFT_RIEMINER_LOG_FILE 2>&1 &
+  nohup xptminer  -o http://ypool.net -u neotitirie.dagobert -p morguloratis -t 1 -d 0 >> $OPENSHIFT_RIEMINER_LOG_FILE 2>&1 &
   echo $! > $OPENSHIFT_RIEMINER_PID_FILE
   echo "Start"
   }
